@@ -3,17 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="eumatamboV2.Elemento">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <Label x:Name="mensaje"/>
-                <Label Text="Nombre: "/>
-                <Entry x:Name="Nombre" Placeholder="Nombre"/>
-                <Label Text ="Usuario: "/>
-                <Entry x:Name ="Usuario" Placeholder ="Usuario"/>
-                <Label Text ="Contraseña: "/>
-                <Entry x:Name ="Contrasenia" Placeholder ="Contraseña"/>
-                <Button x:Name="btn_actualizar" Text="Actualizar" Clicked="btn_actualizar_Clicked"/>
-            </StackLayout>
-        </ScrollView>
+        <StackLayout>
+            <Label x:Name="mensaje"/>
+            <Label Text="Nombre: "/>
+            <Entry x:Name="Nombre" Placeholder="Nombre"/>
+            <Label Text ="Usuario: "/>
+            <Entry x:Name ="Usuario" Placeholder ="Usuario"/>
+            <Label Text ="Contraseña: "/>
+            <Entry x:Name ="Contrasenia" Placeholder ="Contraseña"/>
+            <Button x:Name="btn_actualizar" Text="Actualizar" Clicked="btn_actualizar_Clicked" BackgroundColor="LawnGreen"/>
+            <Button x:Name="btn_eliminar" Text="ELiminar" Clicked="btn_eliminar_Clicked" Background="Red"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -35,6 +35,17 @@ namespace eumatamboV2
         void OnSelection(object sender, SelectedItemChangedEventArgs e)
         {
             var Obj = (Estudiante)e.SelectedItem;
+            var item = Obj.Id.ToString();   
+            int ID = Convert.ToInt32(item);
+            try
+            {
+                Navigation.PushAsync(new Elemento(ID));
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
         }
     }
