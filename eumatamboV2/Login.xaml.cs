@@ -31,7 +31,7 @@ namespace eumatamboV2
                 IEnumerable<Estudiante> resultado = SELECT_WHERE(db, usuario.Text, contra.Text);
                 if (resultado.Count() > 0) 
                 {
-                    Navigation.PushAsync(new ConsultaRegistro());
+                    Navigation.PushAsync(new ConsultarRegistro());
                 }
                 else 
                 {
@@ -46,7 +46,7 @@ namespace eumatamboV2
 
         }
 
-        private IEnumerable<Estudiante> SELECT_WHERE(SQLiteConnection db, string usuario, string contra)
+        public static IEnumerable<Estudiante> SELECT_WHERE(SQLiteConnection db, string usuario, string contra)
         {
             return db.Query<Estudiante>("SELECT * FROM estudiante where Usuario = ? and Contrasenia = ?", usuario, contra);
 
