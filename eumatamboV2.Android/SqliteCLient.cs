@@ -22,6 +22,7 @@ namespace eumatamboV2.Droid
         public SQLiteAsyncConnection GetConnection()
         {
             var documentPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            //se crea la base de datos
             var path = Path.Combine(documentPath, "uisrael.db3");
             return new SQLiteAsyncConnection(path);
         }
